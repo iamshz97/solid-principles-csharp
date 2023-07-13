@@ -2,7 +2,7 @@
 using Shared.Interfaces;
 using Shared.Models;
 
-ILogger logger = new ErrorLogger();
+ILogger logger = new FileErrorLogger();
 
 Employee employee = new RegularEmployee(1, "John Doe", logger);
 employee.Add();

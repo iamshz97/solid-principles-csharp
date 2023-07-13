@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Interfaces;
+namespace SRPWith.Interfaces;
 
-public interface ILogger
+public interface IDataSaver
 {
-    void Log(string errorMessage);
+    void SaveData(string message);
 }

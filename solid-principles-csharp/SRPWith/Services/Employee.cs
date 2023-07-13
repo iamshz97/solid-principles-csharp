@@ -1,18 +1,21 @@
 ﻿
 using Shared.Interfaces;
+using SRPWith.Interfaces;
 
-public class Employee
+public class EmployeeService
 {
     public int Id { get; set; }
     public string Name { get; set; }
 
     private ILogger _logger;
+    private IDataSaver _dataSaver;
 
-    public Employee(int id, string name, ILogger logger)
+    public EmployeeService(int id, string name, ILogger logger, IDataSaver dataSaver)
     {
         Id = id;
         Name = name;
         _logger = logger;
+        _dataSaver = dataSaver;
     }
 
     public void Add()
@@ -20,7 +23,7 @@ public class Employee
         try
         {
             // Logic for adding the employee to the database
-            Console.WriteLine($"Employee {Name} with id {Id} added to the database.");
+            _dataSaver.SaveData($"Employee {Name} with id {Id} added to the database.");
         }
         catch (Exception ex)
         {

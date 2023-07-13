@@ -1,13 +1,13 @@
 ﻿using ISPWith.Interfaces;
 using ISPWith.Models;
 
-IManage manager = new Manager();
-manager.Manage();
+OfficeWorker john = new OfficeWorker();
+john.Work();
+john.Eat();
+john.Recharge();
 
-IWork worker = new Worker();
-worker.StartWork();
-worker.StopWork();
+Robot robot = new Robot();
+robot.Work();
+robot.Recharge();
 
-IEat eater = new Worker();
-eater.StartEat();
-eater.StopEat();
+Console.ReadKey();

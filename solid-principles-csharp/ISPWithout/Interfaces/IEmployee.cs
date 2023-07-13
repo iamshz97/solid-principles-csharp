@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Interfaces;
+namespace ISPWithout.Interfaces;
 
-public interface ILogger
+public interface IEmployee
 {
-    void Log(string errorMessage);
+    void Work();
+    void Eat();
+    void Recharge();
 }
