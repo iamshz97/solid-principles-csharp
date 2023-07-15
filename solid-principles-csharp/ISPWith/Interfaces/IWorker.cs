@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Models;
-internal class ErrorLogger
+namespace ISPWith.Interfaces;
+
+public interface IWorker
 {
+    void Work();
 }

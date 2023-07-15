@@ -1,4 +1,10 @@
-﻿namespace SRPWithout.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SRPWithout.Models;
 
 public class Employee
 {
@@ -20,7 +26,7 @@ public class Employee
         }
         catch (Exception ex)
         {
-            //Saving error to a text file
+            //Saving error to a te
             File.WriteAllText(@"C:\ErrorLog.txt", ex.ToString());
         }
     }

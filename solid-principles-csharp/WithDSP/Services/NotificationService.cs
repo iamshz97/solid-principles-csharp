@@ -1,18 +1,23 @@
-﻿using WithDSP.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using WithDSP.Interfaces;
 
 namespace WithDSP.Services;
 
 public class NotificationService
 {
-    private IMessageService _message;
+    private IMessageService _messageService;
 
-    public NotificationService(IMessageService message)
+    public NotificationService(IMessageService messageService)
     {
-        _message = message;
+        _messageService = messageService;
     }
 
-    public void PromotionalNotification()
+    public void PromotionalNotification(string toContactInfo, string message)
     {
-        _message.SendMessage();
+        _messageService.SendMessage(toContactInfo, message);
     }
 }

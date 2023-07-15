@@ -1,5 +1,13 @@
-﻿using ISPWithout.Interfaces;
-using ISPWithout.Models;
+﻿using ISPWithout.Models;
 
-IWork manager = new Manager();
-manager.Manage();
+OfficeWorker john = new OfficeWorker();
+john.Work();
+john.Eat();
+john.Recharge();
+
+Robot robot = new Robot();
+robot.Work();
+robot.Eat();
+robot.Recharge();
+
+Console.ReadKey();
